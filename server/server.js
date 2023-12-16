@@ -6,12 +6,15 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
+
 dotenv.config();
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
+
+
 
 const port = process.env.PORT || 3000;
 
