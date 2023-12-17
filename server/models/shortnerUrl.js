@@ -17,11 +17,6 @@ const shortnerUrlSchema = new Schema({
         default: 0,
     },
 
-    shortUrl: {
-        type: String,
-        required: true,
-    },
-
     date: {
         type: Date,
         default: Date.now,

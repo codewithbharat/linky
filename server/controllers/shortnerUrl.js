@@ -20,7 +20,6 @@ const shorten = async (req, res) => {
                     url,
                     hash: urlCode,
                     clicks: 0,
-                    shortUrl: process.env.BASE_URL + '/' + urlCode,
                     date: new Date().now
                 });
 
@@ -44,7 +43,7 @@ const redirect = async (req, res) => {
             item.clicks++;
             item.save();
 
-            res.redirect(item.url);
+            res.status(200).json(item);
         } else {
             res.status(404).json('No item found');
         }
