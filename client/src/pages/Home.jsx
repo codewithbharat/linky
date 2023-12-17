@@ -4,7 +4,6 @@ import axios from 'axios';
 
 const Home = () => {
 
-    const [isShorten, setIsShorten] = useState(false);
     const [shortUrl, setShortUrl] = useState(''); // State to store the shortened URL
     const [showModal, setShowModal] = useState(false); // State to control the visibility of the modal
 
@@ -20,8 +19,8 @@ const Home = () => {
             url
         })
             .then(res => {
-                setShortUrl(res.data.shortUrl); // Store the shortened URL in the state
-                setIsShorten(true);
+                setShortUrl(res.data.hash); // Store the shortened URL in the state
+
                 setShowModal(true); // Show the modal
             })
             .catch(err => {
@@ -53,7 +52,7 @@ const Home = () => {
                             <input type="submit" className="px-8 py-2 rounded-r-lg bg-gradient-to-r from-cyan-700 to-red-400  font-bold uppercase z-10 border-yellow-500 border-t border-b border-r shadow-lg cursor-pointer" />
                         </form>
                     </div>
-                    {showModal && <Modal url={shortUrl} onClose={handleCloseModal} />} {/* Render the Modal component */}
+                    {showModal && <Modal url={`${import.meta.env.VITE_BASE_URL}/${shortUrl}`} onClose={handleCloseModal} />} {/* Render the Modal component */}
                 </div>
 
             </div>
