@@ -44,7 +44,7 @@ const Home = () => {
         <Layout>
             <div className="flex justify-center items-center">
                 <div className="flex flex-col text-center m-10">
-                    <h1 className=' sm:text-2xl text-5xl font-bold leading-loose drop-shadow-sm bg-gradient-to-r from-sky-400 to-red-400 bg-clip-text text-transparent'>Shorten Your Loooong Links!!</h1>
+                    <h1 className='text-5xl font-bold leading-loose drop-shadow-sm bg-gradient-to-r from-sky-400 to-red-400 bg-clip-text text-transparent'>Shorten Your Loooong Links!!</h1>
                     <p className='text-semibold tracking-wide'>Linky is an URL shortening service that streamlines your online experience.</p>
                     <div className="flex flex-row justify-center p-4">
                         <form onSubmit={handelSubmit}>

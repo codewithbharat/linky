@@ -23,7 +23,7 @@ const Redirect = () => {
     }
 
     return (
-        <div>Redirecting</div>
+        <div>Redirecting....</div>
     )
 }
 
