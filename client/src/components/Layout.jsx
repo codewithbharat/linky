@@ -11,7 +11,9 @@ const Layout = ({ children }) => {
                 <div className='bg-slate-800 h-full px-12 text-white '>
                     {children}
                 </div>
-                <div className="absolute bottom-0 h-6 bg-slate-700 w-full"></div>
+                <div className="absolute bottom-0 h-6 text-white bg-slate-700/50 w-full text-center">
+                    &copy; codewithbharat | Source Code on <a className='text-blue-300' href="https://github.com/codewithbharat/linky">GitHub</a>
+                </div>
             </div>
         </div>
     )
